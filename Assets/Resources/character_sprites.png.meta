@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 2b0de69bf59c048119dd08a3032405d8
+timeCreated: 1482968560
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: character_kitty_head
+    21300002: character_kitty_eyes
+    21300004: character_kitty_ear_r
+    21300006: character_kitty_ear_l
+    21300008: character_kitty_mouth
+    21300010: hat_baseball_cap
+    21300012: hat_crown
+    21300014: hat_tiara
+    21300016: hat_helmet
+    21300018: hat_top_hat
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: character_kitty_head
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 444
+        width: 296
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_kitty_eyes
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 736
+        width: 155
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_kitty_ear_r
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 729
+        width: 76
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_kitty_ear_l
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 739
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_kitty_mouth
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 934
+        width: 191
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hat_baseball_cap
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 888
+        width: 187
+        height: 122
+      alignment: 9
+      pivot: {x: 0.3876679, y: 0.22123092}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hat_crown
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 831
+        width: 194
+        height: 190
+      alignment: 9
+      pivot: {x: 0.5051562, y: 0.041972272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hat_tiara
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 789
+        width: 171
+        height: 82
+      alignment: 9
+      pivot: {x: 0.55264693, y: 0.10964296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hat_helmet
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 546
+        width: 309
+        height: 229
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9055237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hat_top_hat
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 261
+        width: 209
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5323435, y: 0.0920817}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
