@@ -5,85 +5,35 @@ using System.Collections.Generic;
 public delegate void JobLevelEventHandler();
 
 public class BaseJobClass {
-	private string jobName;
-	private ItemEquipment itemWeapon;
-	private ItemEquipment itemAccessory;
-	private ItemEquipment itemChest;
-	private int experience;
-	private int level;
-	private int guts;
-	private int awesomeness;
-	private int swiftness;
-	private int smarts;
-	private int abilityPoints;
+	public string JobName { get; set; }
+	public ItemEquipment ItemWeapon { get; set; }
+	public ItemEquipment ItemAccessory { get; set; }
+	public ItemEquipment ItemChest { get; set; }
+	public int Level { get; set; }
+	public int Guts { get; set; }
+	public int Awesomeness { get; set; }
+	public int Swiftness { get; set; }
+	public int Smarts { get; set; }
+	public int AbilityPoints { get; set; }
+	public List<BaseAbilityClass> AbilityList { get; set; }
 
-	private List<BaseAbilityClass> abilityList;
+	private int experience;
 
 	public event JobLevelEventHandler JobHasLeveled;
-
-	public string JobName {
-		get { return jobName; }
-		set { jobName = value; }
-	}
-
-	public ItemEquipment ItemWeapon {
-		get { return itemWeapon; }
-		set { itemWeapon = value; }
-	}
-
-	public ItemEquipment ItemChest {
-		get { return itemChest; }
-		set { itemChest = value; }
-	}
-
-	public ItemEquipment ItemAccessory {
-		get { return itemAccessory; }
-		set { itemAccessory = value; }
-	}
-
-	public int Guts {
-		get { return guts; }
-		set { guts = value; }
-	}
-
-	public int Awesomeness {
-		get { return awesomeness; }
-		set { awesomeness = value; }
-	}
-
-	public int Swiftness {
-		get { return swiftness; }
-		set { swiftness = value; }
-	}
-
-	public int Smarts {
-		get { return smarts; }
-		set { smarts = value; }
-	}
 
 	public int Experience {
 		get { return experience; }
 		set { 
 			experience = value;
 
-			if ((experience / 100) > level) {
+			if ((experience / 100) > Level) {
 				LevelUp ();
 			}
 		}
 	}
 
 	public int NextLevel { 
-		get { return (level * 100) + 100; }
-	}
-
-	public int Level {
-		get { return level; }
-		set { level = value; }
-	}
-
-	public int AbilityPoints {
-		get { return abilityPoints; }
-		set { abilityPoints = value; }
+		get { return (Level * 100) + 100; }
 	}
 
 	public virtual string TitleSuffix {
@@ -94,28 +44,23 @@ public class BaseJobClass {
 		get { return string.Empty; }
 	}
 
-	public List<BaseAbilityClass> AbilityList {
-		get { return abilityList; }
-		set { abilityList = value; }
-	}
-
 	public List<BaseAbilityClass> ActiveAbilityList {
-		get { return abilityList.FindAll (FindActiveAbility); }
+		get { return AbilityList.FindAll (FindActiveAbility); }
 	}
 
 	public List<BaseAbilityClass> InactiveAbilityList {
-		get { return abilityList.FindAll (FindInactiveAbility); }
+		get { return AbilityList.FindAll (FindInactiveAbility); }
 	}
 
 	public BaseJobClass() {
-		abilityList = new List<BaseAbilityClass> ();
-		experience = 0;
-		level = 1;
+		AbilityList = new List<BaseAbilityClass> ();
+		Experience = 0;
+		Level = 1;
 	}
 
 	public void AddAbility(BaseAbilityClass ability) {
-		abilityList.Add(ability);
-		ability.Active = (abilityList.Count <= 3);
+		AbilityList.Add(ability);
+		ability.Active = (AbilityList.Count <= 3);
 	}
 
 	private static bool FindActiveAbility(BaseAbilityClass ability)
@@ -129,8 +74,8 @@ public class BaseJobClass {
 	}
 
 	public virtual void LevelUp() { 
-		level++;
-		abilityPoints += 3;
+		Level++;
+		AbilityPoints += 3;
 		JobHasLeveled();
 	}
 }

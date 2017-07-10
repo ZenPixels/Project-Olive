@@ -3,64 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ItemBaseModifier{
-	private int id;
-	private string displayName;
-	private int modGuts;
-	private int modAwesomeness;
-	private int modSwiftness;
-	private int modSmarts;
-	private int modDefense;
-	private int modDamage;
-
-	public int Id {
-		get { return id; }
-		set { id = value; }
-	}
-
-	public string DisplayName {
-		get { return displayName; }
-		set { displayName = value; }
-	}
-
-	public int ModGuts {
-		get { return modGuts; }
-		set { modGuts = value; }
-	}
-
-	public int ModAwesomeness {
-		get { return modAwesomeness; }
-		set { modAwesomeness = value; }
-	}
-
-	public int ModSwiftness {
-		get { return modSwiftness; }
-		set { modSwiftness = value; }
-	}
-
-	public int ModSmarts {
-		get { return modSmarts; }
-		set { modSmarts = value; }
-	}
-
-	public int ModDefense {
-		get { return modDefense; }
-		set { modDefense = value; }
-	}
-
-	public int ModDamage {
-		get { return modDamage; }
-		set { modDamage = value; }
-	}
+	public int Id { get; set; }
+	public string DisplayName { get; set; }
+	public int ModGuts { get; set; }
+	public int ModAwesomeness { get; set; }
+	public int ModSwiftness { get; set; }
+	public int ModSmarts { get; set; }
+	public int ModDefense { get; set; }
+	public int ModDamage { get; set; }
 		
 	public ItemBaseModifier(int ItemId, string ItemDisplayName, int ItemGuts, int ItemAwesomeness, int ItemSwiftness, int ItemSmarts, int ItemDefense, int ItemDamage){
-		id = ItemId;
-		displayName = ItemDisplayName;
-		modGuts = ItemGuts;
-		modAwesomeness = ItemAwesomeness;
-		modSwiftness = ItemSwiftness;
-		modSmarts = ItemSmarts;
-		modDefense = ItemDefense;
-		modDamage = ItemDamage;
+		Id = ItemId;
+		DisplayName = ItemDisplayName;
+		ModGuts = ItemGuts;
+		ModAwesomeness = ItemAwesomeness;
+		ModSwiftness = ItemSwiftness;
+		ModSmarts = ItemSmarts;
+		ModDefense = ItemDefense;
+		ModDamage = ItemDamage;
 	}
 
 	/*

@@ -3,28 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BaseCharacterClass : BaseEntityClass {
-	private string titlePrefix;
-	private string titleSuffix;
-
-	private List<BaseJobClass> jobs;
-	private int activeJobIndex;
-	private int currentEnergy;
-	private int energyRegen;
-
-	public string FullCharacterName {
-		get { 
-			return ActiveJob.TitlePrefix + Name + ActiveJob.TitleSuffix;
-		}
-	}
-
-	public BaseJobClass ActiveJob {
-		get { return jobs [activeJobIndex]; }
-	}
-
-	public int ActiveJobIndex {
-		get { return activeJobIndex; }
-		set { activeJobIndex = value; }
-	}
+	public int ActiveJobIndex { get; set; }
 
 	public ItemEquipment ActiveJobWeapon {
 		get { return ActiveJob.ItemWeapon; }
@@ -39,6 +18,24 @@ public class BaseCharacterClass : BaseEntityClass {
 	public ItemEquipment ActiveJobAccessory {
 		get { return ActiveJob.ItemAccessory; }
 		set { ActiveJob.ItemAccessory = value; }
+	}
+
+	private string titlePrefix;
+	private string titleSuffix;
+
+	private List<BaseJobClass> jobs;
+	// private int activeJobIndex;
+	private int currentEnergy;
+	private int energyRegen;
+
+	public string FullCharacterName {
+		get { 
+			return ActiveJob.TitlePrefix + Name + ActiveJob.TitleSuffix;
+		}
+	}
+
+	public BaseJobClass ActiveJob {
+		get { return jobs [ActiveJobIndex]; }
 	}
 
 	public int EffectiveGuts {
@@ -104,21 +101,6 @@ public class BaseCharacterClass : BaseEntityClass {
 		set { jobs = value; }
 	}
 
-	/*
-	public int CurrentHealth {
-		get { return currentHealth; }
-		set {
-			if (currentHealth + value < 0) {  
-				currentHealth = 0;
-			} else if ((currentHealth + value) > MaxHealth) {
-				currentHealth = MaxHealth;
-			} else {
-				currentHealth += value;
-			}
-		}
-	}
-	*/
-
 	public int CurrentEnergy {
 		get { return currentEnergy; }
 		set {
@@ -131,14 +113,6 @@ public class BaseCharacterClass : BaseEntityClass {
 			}
 		}
 	}
-
-	/*
-	public EntityConditions Condition {
-		get {
-			return currentHealth == 0 ? EntityConditions.UNCONSCIOUS : EntityConditions.OKAY;
-		}
-	}
-	*/
 
 	public BaseCharacterClass() {
 		jobs = new List<BaseJobClass> ();

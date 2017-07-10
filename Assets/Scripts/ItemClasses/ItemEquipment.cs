@@ -36,12 +36,9 @@ public class ItemEquipment : BaseItemClass {
 	private EquipmentSlots equipmentSlot;
 	private EquipmentSets equipmentType;
 
-	public string Name{
-		get { return name; }
-		set { name = value; }
-	}
+	public string Name { get; set; }
 
-	public string FullName{
+	public string FullName {
 		get {  
 			string returnName = prefixModifier == null ? name : prefixModifier.DisplayName + " " + name;
 			returnName = suffixModifier == null ? returnName : returnName + " " + suffixModifier.DisplayName;

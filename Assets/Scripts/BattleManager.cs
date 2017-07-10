@@ -26,7 +26,15 @@ namespace Olive {
 		}
 		*/
 
+		void Update() {
+			if (Input.GetKeyDown ("space")) {
+				party[0].ActiveJob.Experience += 20;
+				party[1].ActiveJob.Experience += 20;
+				party[2].ActiveJob.Experience += 20;
 
+				AnimateDamage (enemies[0]);
+			}
+		}
 
 		public void ExecuteRound() {
 
@@ -40,8 +48,12 @@ namespace Olive {
 
 		}
 
-		public void CalculateDamage(BaseAbilityClass ability, BaseEntityClass defender) {
+		void CalculateDamage(BaseAbilityClass ability, BaseEntityClass defender) {
 
+		}
+
+		void AnimateDamage(BaseEntityClass entity) {
+			iTween.ShakePosition (entity.EntityGameObject, iTween.Hash("x", 0.1f, "y", 0.1f, "time", 0.5f));
 		}
 	}
 }

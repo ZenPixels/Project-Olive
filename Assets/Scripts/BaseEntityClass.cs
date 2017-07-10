@@ -11,6 +11,7 @@ public class BaseEntityClass {
 	public GameObject EntityGameObject { get; set; }
 	public virtual int Initiative { get; set; }
 	public int MaxHealth { get; set; }
+
 	private int currentHealth;
 
 	public enum EntityConditions {

@@ -68,16 +68,6 @@ namespace Olive {
 			InitializeCharacterObjects (party);
 			InitializeEnemyObjects (enemies);
 		}
-			
-		void Update() {
-			if (Input.GetKeyDown ("space")) {
-				party[0].ActiveJob.Experience += 20;
-				party[1].ActiveJob.Experience += 20;
-				party[2].ActiveJob.Experience += 20;
-
-				AnimateDamage (enemies[0]);
-			}
-		}
 
 		void OnGUI () {
 			guiStyle.fontSize = 16;
@@ -121,13 +111,8 @@ namespace Olive {
 			entity.EntityGameObject = entitySprite;
 		}
 
-		void CalculateDamage(BaseAbilityClass ability, BaseEntityClass defender) {
-
-		}
-
 		void AnimateDamage(BaseEntityClass entity) {
 			iTween.ShakePosition (entity.EntityGameObject, iTween.Hash("x", 0.1f, "y", 0.1f, "time", 0.5f));
 		}
-
 	}
 }
